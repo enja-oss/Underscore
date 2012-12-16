@@ -53,7 +53,7 @@ en.ja-ossプロジェクトでは現在管理者を募集しています。
 
 ###参照先
 
-翻訳当時の[Backbone.jsのGitHubページ](http://backbonejs.org/)を参考にしています。そのため、その時点の本家[gh-pages](https://github.com/documentcloud/backbone/tree/gh-pages)ブランチから、コミットハッシュのtreeを辿って指定しています。
+翻訳当時の[Underscore.jsのGitHubページ](http://underscorejs.org/)を参考にしています。そのため、その時点の本家[gh-pages](https://github.com/documentcloud/underscore/tree/gh-pages)ブランチから、コミットハッシュのtreeを辿って指定しています。
 
 ##ライセンス・クレジット
 
