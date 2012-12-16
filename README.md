@@ -35,9 +35,10 @@ en.ja-ossプロジェクトでは現在管理者を募集しています。
 
 ##翻訳済みコンテンツ
 
+- [Intoduction](https://github.com/enja-oss/Underscore/blob/master/docs/Introduction.md)
+
 ##着手中/予定コンテンツ
 
-- [Intoduction](http://underscorejs.org/#) [@Layzie](https://github.com/Layzie)
 - [Collections](http://underscorejs.org/#collections) [@Layzie](https://github.com/Layzie)
 - [Utility](http://underscorejs.org/#utility) [@mitsuruog](https://github.com/mitsuruog)
 
@@ -65,3 +66,5 @@ Underscore.jsのライセンスを引き継ぎ、すべてMIT Licenseとしま�
 ##翻訳参加者
 
 随時追加しています。
+
+- [@Layzie](https://github.com/Layzie) Intoduction
