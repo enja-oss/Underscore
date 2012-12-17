@@ -6,7 +6,12 @@ Pull Request・Issue・ご寄稿・ご指摘、いずれも歓迎しています
 
 ## en.ja-ossへの参加について
 
-[README](https://github.com/enja-oss/README)レポジトリはenja-ossのトップページです。このレポジトリの[README](https://github.com/enja-oss/README/blob/master/readme.md)や[Issues](https://github.com/enja-oss/README/issues)にて本グループに参加いただく際の注意点などを記載しています。グループワークを円滑に行うために一読してください。 
+[README](https://github.com/enja-oss/README)レポジトリはenja-ossのトップページです。  
+このレポジトリの[README](https://github.com/enja-oss/README/blob/master/readme.md)や[Issues](https://github.com/enja-oss/README/issues)にて本グループに参加いただく際の注意点などを記載しています。
+グループワークを円滑に行うために一読してください。  
+
+また参加いただく際にできればREADMEレポジトリをStarではなく、Watchいただければ。  
+Google Groupなどを使った連絡についても検討しましたが、GitHubで完結できる方が結果的に負担が少ないと判断してますので、ご協力ください。
 
 - [参加方法](https://github.com/enja-oss/README/blob/master/readme.md#%E5%8F%82%E5%8A%A0%E6%96%B9%E6%B3%95)
 - [監訳希望](https://github.com/enja-oss/README/blob/master/readme.md#%E7%9B%A3%E8%A8%B3%E5%B8%8C%E6%9C%9B)
