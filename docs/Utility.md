@@ -1,6 +1,8 @@
-**Utility Functions**
++  元文書: [underscore/index.html at a5ea59ad16d478a3643f6440ea94ac19ae86f0d4 · documentcloud/underscore · GitHub](https://github.com/documentcloud/underscore/blob/a5ea59ad16d478a3643f6440ea94ac19ae86f0d4/index.html "underscore/index.html at a5ea59ad16d478a3643f6440ea94ac19ae86f0d4 · documentcloud/underscore · GitHub")
 
-**noConflict** _.noConflict() 
+## Utility Functions [原文](http://underscorejs.org/#utility)
+
+**noConflict** _.noConflict() [原文](http://underscorejs.org/#noConflict)
 
 Give control of the "_" variable back to its previous owner. Returns a reference to the **Underscore** object.
 
@@ -8,7 +10,7 @@ Give control of the "_" variable back to its previous owner. Returns a reference
 var underscore = _.noConflict();
 ```
 
-**identity**  _.identity(value) 
+**identity**  _.identity(value) [原文](http://underscorejs.org/#identity)
 
 Returns the same value that is used as the argument. In math: `f(x) = x`
 This function looks useless, but is used throughout Underscore as a default iterator.
@@ -19,7 +21,7 @@ moe === _.identity(moe);
 => true
 ```
 
-**times** _.times(n, iterator, [context]) 
+**times** _.times(n, iterator, [context]) [原文](http://underscorejs.org/#times)
 
 Invokes the given iterator function n times. Each invocation of **iterator** is called with an `index` argument. 
 
@@ -29,7 +31,7 @@ _Note: this example uses the [chaining syntax](http://underscorejs.org/#chaining
 _(3).times(function(n){ genie.grantWishNumber(n); });
 ```
 
-**random** _.random(min, max) 
+**random** _.random(min, max) [原文](http://underscorejs.org/#random)
 
 Returns a random integer between **min** and **max**, inclusive. If you only pass one argument, it will return a number between `0` and that number.
 
@@ -38,7 +40,7 @@ _.random(0, 100);
 => 42
 ```
 
-**mixin** _.mixin(object) 
+**mixin** _.mixin(object) [原文](http://underscorejs.org/#mixin)
 
 Allows you to extend Underscore with your own utility functions. Pass a hash of `{name: function}` definitions to have your functions added to the Underscore object, as well as the OOP wrapper.
 
@@ -52,7 +54,7 @@ _("fabio").capitalize();
 => "Fabio"
 ```
 
-**uniqueId** _.uniqueId([prefix]) 
+**uniqueId** _.uniqueId([prefix]) [原文](http://underscorejs.org/#uniqueId)
 
 Generate a globally-unique id for client-side models or DOM elements that need one. If **prefix** is passed, the id will be appended to it.
 
@@ -61,7 +63,7 @@ _.uniqueId('contact_');
 => 'contact_104'
 ```
 
-**escape** _.escape(string) 
+**escape** _.escape(string) [原文](http://underscorejs.org/#escape)
 
 Escapes a string for insertion into HTML, replacing `&`, `<`, `>`, `"`, `'`, and `/` characters.
 
@@ -70,7 +72,7 @@ _.escape('Curly, Larry & Moe');
 => "Curly, Larry &amp; Moe"
 ```
 
-**unescape** _.unescape(string) 
+**unescape** _.unescape(string) [原文](http://underscorejs.org/#unescape)
 
 The opposite of **[escape](http://underscorejs.org/#escape)**, replaces `&amp;`, `&lt;`, `&gt;`, `&quot;`, `&#x27;` , 
 and `&#x2F;` with their unescaped counterparts.
@@ -80,7 +82,7 @@ _.escape('Curly, Larry &amp; Moe');
 => "Curly, Larry & Moe"
 ```
 
-**result** _.result(object, property) 
+**result** _.result(object, property) [原文](http://underscorejs.org/#result)
 
 If the value of the named property is a function then invoke it; otherwise, return it.
 
@@ -92,7 +94,7 @@ _.result(object, 'stuff');
 => "nonsense"
 ```
 
-**template** _.template(templateString, [data], [settings]) 
+**template** _.template(templateString, [data], [settings]) [原文](http://underscorejs.org/#template)
 
 Compiles JavaScript templates into functions that can be evaluated for rendering. 
 Useful for rendering complicated bits of HTML from JSON data sources. 
