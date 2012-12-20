@@ -64,7 +64,7 @@ en.ja-ossプロジェクトでは現在管理者を募集しています。
 ##ライセンス・クレジット
 
 本ドキュメントは、underscore.orgで公開されているものを翻訳したドキュメントです。 
-原文は[Uackbone.js](http://underscorejs.org/ "Underscore.js")にあります。
+原文は[Underscore.js](http://underscorejs.org/ "Underscore.js")にあります。
 
 Underscore.jsのライセンスを引き継ぎ、すべてMIT Licenseとします。
 
