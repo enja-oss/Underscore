@@ -46,6 +46,7 @@ en.ja-ossプロジェクトでは現在管理者を募集しています。
 
 - [Collections](http://underscorejs.org/#collections) [@Layzie](https://github.com/Layzie)
 - [Utility](http://underscorejs.org/#utility) [@mitsuruog](https://github.com/mitsuruog)
+- [annotated source code](http://underscorejs.org/docs/underscore.html) [@ahomu](https://github.com/ahomu)
 
 ##未着手コンテンツ
 
