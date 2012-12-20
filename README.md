@@ -44,13 +44,13 @@ en.ja-ossプロジェクトでは現在管理者を募集しています。
 
 ##着手中/予定コンテンツ
 
+- [Arrays](http://underscorejs.org/#arrays)[@1000ch](https://github.com/1000ch)
 - [Collections](http://underscorejs.org/#collections) [@Layzie](https://github.com/Layzie)
 - [Utility](http://underscorejs.org/#utility) [@mitsuruog](https://github.com/mitsuruog)
 - [annotated source code](http://underscorejs.org/docs/underscore.html) [@ahomu](https://github.com/ahomu)
 
 ##未着手コンテンツ
 
-- [Arrays](http://underscorejs.org/#arrays)
 - [Functions](http://underscorejs.org/#functions)
 - [Objects](http://underscorejs.org/#objects)
 - [Chaining](http://underscorejs.org/#chaining)
