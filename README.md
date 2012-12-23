@@ -48,11 +48,11 @@ en.ja-ossプロジェクトでは現在管理者を募集しています。
 - [Collections](http://underscorejs.org/#collections) [@Layzie](https://github.com/Layzie)
 - [Utility](http://underscorejs.org/#utility) [@mitsuruog](https://github.com/mitsuruog)
 - [Functions](http://underscorejs.org/#functions)[@hoisjp](https://github.com/hoisjp)
+- [Objects](http://underscorejs.org/#objects)[@tokuda109](https://github.com/tokuda109) 
 - [annotated source code](http://underscorejs.org/docs/underscore.html) [@ahomu](https://github.com/ahomu)
 
 ##未着手コンテンツ
 
-- [Objects](http://underscorejs.org/#objects)
 - [Chaining](http://underscorejs.org/#chaining)
 
 コンテンツの翻訳にご協力くださる方は、ぜひ[着手予定の宣言コーナー](https://github.com/enja-oss/Underscore/issues/1)でお知らせください。
