@@ -1,4 +1,4 @@
-Q+  元文書: [underscore/index.html at a5ea59ad16d478a3643f6440ea94ac19ae86f0d4 · documentcloud/underscore · GitHub](https://github.com/documentcloud/underscore/blob/a5ea59ad16d478a3643f6440ea94ac19ae86f0d4/index.html "underscore/index.html at a5ea59ad16d478a3643f6440ea94ac19ae86f0d4 · documentcloud/underscore · GitHub")
++  元文書: [underscore/index.html at a5ea59ad16d478a3643f6440ea94ac19ae86f0d4 · documentcloud/underscore · GitHub](https://github.com/documentcloud/underscore/blob/a5ea59ad16d478a3643f6440ea94ac19ae86f0d4/index.html "underscore/index.html at a5ea59ad16d478a3643f6440ea94ac19ae86f0d4 · documentcloud/underscore · GitHub")
 
 ## Chaining [原文](http://underscorejs.org/#chaining)
 
@@ -8,8 +8,6 @@ Underscoreは好みに応じてオブジェクト指向スタイル、関数ス�
 _.map([1, 2, 3], function(n){ return n * 2; });
 _([1, 2, 3]).map(function(n){ return n * 2; });
 ```
-
-Calling chain will cause all future method calls to return wrapped objects. When you've finished the computation, use value to retrieve the final value. Here's an example of chaining together a map/flatten/reduce, in order to get the word count of every word in a song.
 
 `chain`の呼び出しは将来的にすべてのメソッドコールに対して内包されたオブジェクトを返すことになります。計算が終了した際は最終的な値を取得するのに `value` を利用してください。以下は歌詞の中の単語カウントを取得するために **`map`/`flatten`/`reduce`** をチェーンした例となります。
 
