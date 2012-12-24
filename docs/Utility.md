@@ -129,6 +129,12 @@ pass in a **data** object that has properties corresponding to the template's fr
 If you're writing a one-off, you can pass the **data** object as the second parameter to **template** in order to render immediately instead of returning a template function. 
 The **settings** argument should be a hash containing any `_.templateSettings` that should be overridden.
 
+この関数の中でJavascriptのテンプレートをコンパイルし、レンダリングのため評価します。
+JSONデータソースから複雑なHTMLの断片をレンダリングするために便利です。
+template関数は次のどちらの方法でも変数を挟むことができます。 `<%= … %>` を使う場合、 `<% … %>` と同様に、任意のJavascriptのコードを実行することができます。また、 `<%- … %>` を使って変数を挟んだ場合、template関数を評価する際に、 **data** オブジェクトが持っているプロパティの中でtemplateの変数に該当するものを、HTMLエンコードします。
+もし、一回で定義したい場合は、 **template** の2つめの引数に **data** オブジェクトを渡すことで、すぐにレンダリングする代わりにtemplate関数を返します。
+また、引数の **settings** は、 `templateSettings` のいずれかをオーバーライドするハッシュでなけれななりません。
+
 ```javascript 
 var compiled = _.template("hello: <%= name %>");
 compiled({name : 'moe'});
@@ -162,6 +168,11 @@ You may define or omit any combination of the three.
 For example, to perform [Mustache.js](http://github.com/janl/mustache.js#readme) style templating:
 
 ERBスタイルのデリミタが好みではない場合、UnderscoreのtemplateSettingsにて、コードの置き換えを異なるシンボルを使って行うよう変更することができます。
+interpolateは、一致したものを補完する正規表現式を定義してください（デフォルトは`<%=　%>`用）。
+escapeは、HTMLエスケープした後の値を挿入する正規表現式を定義してください（デフォルトは`<%-　%>`用）。
+evaluateは、結果文字列に挿入することなく評価される正規表現式を定義してください（デフォルトは`<%　%>`用）。
+上の3つについて、それぞれ変更することができます。
+この例では、[Mustache.js](http://github.com/janl/mustache.js#readme)スタイルのテンプレートで行っています。
 
 ```javascript 
 _.templateSettings = {
@@ -177,6 +188,9 @@ By default, **template** places the values from your data in the local scope via
 However, you can specify a single **variable** name with the variable setting. 
 This can significantly improve the speed at which a template is able to render.
 
+デフォルトでは、 **template** の場所の値は、 **with** ステートメントによってローカルスコープの中のデータから探します。
+ただし、`variable` を設定することで、単一の変数名を指定することができます。これにより、テンプレートがレンダリングするスピードを大幅に改善することができます。
+
 ```javascript 
 _.template("Using 'with': <%= data.answer %>", {answer: 'no'}, {variable: 'data'});
 => "Using 'with': no"
@@ -186,6 +200,9 @@ Precompiling your templates can be a big help when debugging errors you can't re
 This is because precompiled templates can provide line numbers and a stack trace, 
 something that is not possible when compiling templates on the client. 
 The **source** property is available on the compiled template function for easy precompilation.
+
+再現が難しいエラーをデバッグするときに、テンプレートをプリコンパイルすると、大きな助けとなるります。これは、プリコンパイルされたテンプレートが、クライアントでテンプレートがコンパイルされる際のエラーについて、行番号とスタックトレースを提供できるためです。
+**source** プロパティは、コンパイルされたテンプレート上において、簡単にプリコンパイルする関数を利用するためのものです。
 
 ```javascript 
 <script>
