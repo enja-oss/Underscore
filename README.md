@@ -41,6 +41,8 @@ en.ja-ossプロジェクトでは現在管理者を募集しています。
 ##翻訳済みコンテンツ
 
 - [Intoduction](https://github.com/enja-oss/Underscore/blob/master/docs/Introduction.md)
+- [Chaining](https://github.com/enja-oss/Underscore/blob/master/docs/Chaining.md)
+- [Links & Suggested Reading](https://github.com/enja-oss/Underscore/blob/master/docs/Links-and-Suggested-reading.md)
 
 ##着手中/予定コンテンツ
 
@@ -53,7 +55,6 @@ en.ja-ossプロジェクトでは現在管理者を募集しています。
 
 ##未着手コンテンツ
 
-- [Chaining](http://underscorejs.org/#chaining)
 
 コンテンツの翻訳にご協力くださる方は、ぜひ[着手予定の宣言コーナー](https://github.com/enja-oss/Underscore/issues/1)でお知らせください。
 その際に、着手予定のが他の人とかぶっていないこともご確認ください。
@@ -74,3 +75,4 @@ Underscore.jsのライセンスを引き継ぎ、すべてMIT Licenseとしま�
 随時追加しています。
 
 - [@Layzie](https://github.com/Layzie) Intoduction
+- [@studiomohawk](https://github.com/studiomohawk) Chaining, Links & Suggested Reading
