@@ -29,13 +29,13 @@ Google Groupなどを使った連絡についても検討しましたが、GitHu
 
 ## 書式ガイド
 
-en.ja-ossプロジェクト内では以下の書式ガイドを設けています。 
+en.ja-ossプロジェクト内では以下の書式ガイドを設けています。   
 [書式ガイド@wiki](https://github.com/enja-oss/README/wiki/markdown-in-japanese) 
 Markdown上で元文書の表現を再現できるようご協力ください。
 
 ## 管理者を募集しています
 
-en.ja-ossプロジェクトでは現在管理者を募集しています。 
+en.ja-ossプロジェクトでは現在管理者を募集しています。  
 詳しくは[こちらを参照してください](https://github.com/enja-oss/README/issues/12)。
 
 ##翻訳済みコンテンツ
@@ -55,13 +55,15 @@ en.ja-ossプロジェクトでは現在管理者を募集しています。
 
 ##未着手コンテンツ
 
+- 現在着手前のコンテンツはありません
 
 コンテンツの翻訳にご協力くださる方は、ぜひ[着手予定の宣言コーナー](https://github.com/enja-oss/Underscore/issues/1)でお知らせください。
 その際に、着手予定のが他の人とかぶっていないこともご確認ください。
 
 ###参照先
 
-翻訳当時の[Underscore.jsのGitHubページ](http://underscorejs.org/)を参考にしています。そのため、その時点の本家[gh-pages](https://github.com/documentcloud/underscore/tree/gh-pages)ブランチから、コミットハッシュのtreeを辿って指定しています。
+翻訳当時の[Underscore.jsのGitHubページ](http://underscorejs.org/)を参考にしています。  
+そのため、その時点の本家[gh-pages](https://github.com/documentcloud/underscore/tree/gh-pages)ブランチから、コミットハッシュのtreeを辿って指定しています。
 
 ##ライセンス・クレジット
 
