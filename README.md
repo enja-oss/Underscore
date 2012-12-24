@@ -6,11 +6,11 @@ Pull Request・Issue・ご寄稿・ご指摘、いずれも歓迎しています
 
 ## en.ja-ossへの参加について
 
-[README](https://github.com/enja-oss/README)レポジトリはenja-ossのトップページです。 
+[README](https://github.com/enja-oss/README)レポジトリはenja-ossのトップページです。
 このレポジトリの[README](https://github.com/enja-oss/README/blob/master/readme.md)や[Issues](https://github.com/enja-oss/README/issues)にて本グループに参加いただく際の注意点などを記載しています。
-グループワークを円滑に行うために一読してください。 
+グループワークを円滑に行うために一読してください。
 
-また参加いただく際にできればREADMEレポジトリをStarではなく、Watchいただければ。 
+また参加いただく際にできればREADMEレポジトリをStarではなく、Watchいただければ。
 Google Groupなどを使った連絡についても検討しましたが、GitHubで完結できる方が結果的に負担が少ないと判断してますので、ご協力ください。
 
 - [参加方法](https://github.com/enja-oss/README/blob/master/readme.md#%E5%8F%82%E5%8A%A0%E6%96%B9%E6%B3%95)
@@ -29,13 +29,13 @@ Google Groupなどを使った連絡についても検討しましたが、GitHu
 
 ## 書式ガイド
 
-en.ja-ossプロジェクト内では以下の書式ガイドを設けています。  
+en.ja-ossプロジェクト内では以下の書式ガイドを設けています。
 [書式ガイド@wiki](https://github.com/enja-oss/README/wiki/markdown-in-japanese)
 Markdown上で元文書の表現を再現できるようご協力ください。
 
 ## 管理者を募集しています
 
-en.ja-ossプロジェクトでは現在管理者を募集しています。 
+en.ja-ossプロジェクトでは現在管理者を募集しています。
 詳しくは[こちらを参照してください](https://github.com/enja-oss/README/issues/12)。
 
 ##翻訳済みコンテンツ
@@ -62,7 +62,7 @@ en.ja-ossプロジェクトでは現在管理者を募集しています。
 
 ###参照先
 
-翻訳当時の[Underscore.jsのGitHubページ](http://underscorejs.org/)を参考にしています。 
+翻訳当時の[Underscore.jsのGitHubページ](http://underscorejs.org/)を参考にしています。
 そのため、その時点の本家[gh-pages](https://github.com/documentcloud/underscore/tree/gh-pages)ブランチから、コミットハッシュのtreeを辿って指定しています。
 
 ##ライセンス・クレジット
