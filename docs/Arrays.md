@@ -3,7 +3,7 @@
 ## Array Functions [原文](http://underscorejs.org/#arrays)
 
 Note: All array functions will also work on the arguments object. However, Underscore functions are not designed to work on "sparse" arrays.  
-注: 全ての配列関数は、オブジェクトを引数に取ることができます。しかし、まばらな配列に対しては実行することが出来ません。  
+注: 全ての配列関数は、オブジェクトを引数に取ることができます。しかし、まばらな配列に対して実行できるようには設計されていません。  
 
 ###first `_.first(array, [n])` Alias: **head, take**
 Returns the first element of an array. Passing n will return the first n elements of the array.  
@@ -14,7 +14,7 @@ Returns the first element of an array. Passing n will return the first n element
 
 ###initial `_.initial(array, [n])` 
 Returns everything but the last entry of the array. Especially useful on the arguments object. Pass n to exclude the last n elements from the result.  
-配列の最後の要素以外を返します。オブジェクトを引数に取る場合に特に便利です。nを与えると、配列の最後のn個の要素を返り値に含めません。  
+配列の最後の要素以外を返します。argumentsを引数に取る場合に特に便利です。nを与えると、配列の最後のn個の要素を返り値に含めません。  
 
     _.initial([5, 4, 3, 2, 1]);
     => [5, 4, 3, 2]
@@ -35,7 +35,7 @@ Returns the rest of the elements in an array. Pass an index to return the values
 
 ###compact `_.compact(array)` 
 Returns a copy of the array with all falsy values removed. In JavaScript, false, null, 0, "", undefined and NaN are all falsy.  
-falseを振る舞う要素を除いた配列のコピーを返します。JavaScriptにおいて、false、null、0、""、undefinedはfalse値を取ります。  
+falseを振る舞う要素を除いた配列のコピーを返します。JavaScriptにおいて、false、null、0、""、undefinedはfalse値を返します。  
 
     _.compact([0, 1, false, 2, '', 3]);
     => [1, 2, 3]
@@ -80,46 +80,52 @@ without関数と似ていますが、指定の配列に存在しない値を返�
 
 ###uniq `_.uniq(array, [isSorted], [iterator])` Alias: **unique** 
 Produces a duplicate-free version of the array, using === to test object equality. If you know in advance that the array is sorted, passing true for isSorted will run a much faster algorithm. If you want to compute unique items based on a transformation, pass an iterator function.
-値の比較に"==="を使用し、ユニークな値を要素とする配列を返します。要素がソートされても良ければ、isSortedにtrueを与えることで、より高速に実行されます。ユニークな値を独自に走査したい場合はiteratorに比較関数を渡して下さい。  
+値の比較に"==="を使用し、ユニークな値を要素とする配列を返します。配列がソートされても良ければ、isSortedにtrueを与えることで、より高速に実行されます。ユニークな値を独自に走査したい場合はiteratorに比較関数を渡して下さい。  
 
     _.uniq([1, 2, 1, 3, 1, 4]);
     => [1, 2, 3, 4]
 
 ###zip `_.zip(*arrays)` 
-Merges together the values of each of the arrays with the values at the corresponding position. Useful when you have separate data sources that are coordinated through matching array indexes. If you're working with a matrix of nested arrays, zip.apply can transpose the matrix in a similar fashion.
+Merges together the values of each of the arrays with the values at the corresponding position. Useful when you have separate data sources that are coordinated through matching array indexes. If you're working with a matrix of nested arrays, zip.apply can transpose the matrix in a similar fashion.  
+各配列の同じインデックスをキーとし、配列を要素とする配列を返します。配列データのindexをキーとするデータを扱う場合に便利です。
 
     _.zip(['moe', 'larry', 'curly'], [30, 40, 50], [true, false, false]);
     => [["moe", 30, true], ["larry", 40, false], ["curly", 50, false]]
 
 ###object `_.object(list, [values])` 
-Converts arrays into objects. Pass either a single list of [key, value] pairs, or a list of keys, and a list of values.
+Converts arrays into objects. Pass either a single list of [key, value] pairs, or a list of keys, and a list of values.  
+配列をオブジェクトに変換します。単一のkeyとvalueのペア、keysのリスト、valuesのリストのいずれかを与えて下さい。  
 
     _.object(['moe', 'larry', 'curly'], [30, 40, 50]);
     => {moe: 30, larry: 40, curly: 50}
-
+    
     _.object([['moe', 30], ['larry', 40], ['curly', 50]]);
     => {moe: 30, larry: 40, curly: 50}
 
 ###indexOf `_.indexOf(array, value, [isSorted])` 
-Returns the index at which value can be found in the array, or -1 if value is not present in the array. Uses the native indexOf function unless it's missing. If you're working with a large array, and you know that the array is already sorted, pass true for isSorted to use a faster binary search ... or, pass a number as the third argument in order to look for the first matching value in the array after the given index.
+Returns the index at which value can be found in the array, or -1 if value is not present in the array. Uses the native indexOf function unless it's missing. If you're working with a large array, and you know that the array is already sorted, pass true for isSorted to use a faster binary search ... or, pass a number as the third argument in order to look for the first matching value in the array after the given index.  
+指定の値と同じ値を持つ要素を配列から探し、見つかった最初のインデックスを取得します。配列中に存在しない場合-1を返します。ネイティブのindexOf関数がある場合はそれを使用します。大きな配列を扱う場合、且つ配列がソートされても良ければ、isSortedにtrueを与えることで、より高速に実行されます。また、第三引数に数字を与えると、そのインデックスから探索をします。  
 
     _.indexOf([1, 2, 3], 2);
     => 1
 
 ###lastIndexOf `_.lastIndexOf(array, value, [fromIndex])` 
-Returns the index of the last occurrence of value in the array, or -1 if value is not present. Uses the native lastIndexOf function if possible. Pass fromIndex to start your search at a given index.
+Returns the index of the last occurrence of value in the array, or -1 if value is not present. Uses the native lastIndexOf function if possible. Pass fromIndex to start your search at a given index.  
+指定の値と同じ値を持つ要素を配列から探し、見つかった最後のインデックスを取得します。配列中に存在しない場合-1を返します。ネイティブのlastIndexOf関数がある場合はそれを使用します。fromIndexを与えると、そのインデックスから探索をします。  
 
     _.lastIndexOf([1, 2, 3, 1, 2, 3], 2);
     => 4
 
 ###sortedIndex `_.sortedIndex(list, value, [iterator])` 
-Uses a binary search to determine the index at which the value should be inserted into the list in order to maintain the list's sorted order. If an iterator is passed, it will be used to compute the sort ranking of each value, including the value you pass.
+Uses a binary search to determine the index at which the value should be inserted into the list in order to maintain the list's sorted order. If an iterator is passed, it will be used to compute the sort ranking of each value, including the value you pass.  
+指定の値が配列に挿入されソートされたときに、どの位置に挿入されるかを、二分探索で検索し取得します。iteratorを与えると、配列はそれを比較関数としてソートされます。  
 
     _.sortedIndex([10, 20, 30, 40, 50], 35);
     => 3
 
 ###range `_.range([start], stop, [step])` 
-A function to create flexibly-numbered lists of integers, handy for each and map loops. start, if omitted, defaults to 0; step defaults to 1. Returns a list of integers from start to stop, incremented (or decremented) by step, exclusive.
+A function to create flexibly-numbered lists of integers, handy for each and map loops. start, if omitted, defaults to 0; step defaults to 1. Returns a list of integers from start to stop, incremented (or decremented) by step, exclusive.  
+簡易的なeachとmap機能を備えた、整数の配列を生成する関数です。startからstopまでの、stepずつインクリメント（またはデクリメント）された数字の配列を返します。startが省略されると0から開始され、デフォルトで1ずつインクリメントされます。  
 
     _.range(10);
     => [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
