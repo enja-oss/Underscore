@@ -2,36 +2,48 @@
 
 ## Array Functions [原文](http://underscorejs.org/#arrays)
 
-Note: All array functions will also work on the arguments object. However, Underscore functions are not designed to work on "sparse" arrays.
-注:
+Note: All array functions will also work on the arguments object. However, Underscore functions are not designed to work on "sparse" arrays.  
+注: 全ての配列関数は、オブジェクトを引数に取ることができます。しかし、まばらな配列に対しては実行することが出来ません。  
 
-###first `_.first(array, [n])` Alias:head, take
-Returns the first element of an array. Passing n will return the first n elements of the array.
+###first `_.first(array, [n])` Alias: **head, take**
+Returns the first element of an array. Passing n will return the first n elements of the array.  
+配列の最初の要素を返します。nを与えると、配列の最初のn個の要素を返します。  
+
     _.first([5, 4, 3, 2, 1]);
     => 5
 
 ###initial `_.initial(array, [n])` 
-Returns everything but the last entry of the array. Especially useful on the arguments object. Pass n to exclude the last n elements from the result.
+Returns everything but the last entry of the array. Especially useful on the arguments object. Pass n to exclude the last n elements from the result.  
+配列の最後の要素以外を返します。オブジェクトを引数に取る場合に特に便利です。nを与えると、配列の最後のn個の要素を返り値に含めません。  
+
     _.initial([5, 4, 3, 2, 1]);
     => [5, 4, 3, 2]
 
 ###last `_.last(array, [n])` 
-Returns the last element of an array. Passing n will return the last n elements of the array.
+Returns the last element of an array. Passing n will return the last n elements of the array.  
+配列の最後の要素を返します。nを与えると、配列の最後のn個の要素を返します。  
+
     _.last([5, 4, 3, 2, 1]);
     => 1
 
-###rest `_.rest(array, [index])` Alias: tail, drop 
-Returns the rest of the elements in an array. Pass an index to return the values of the array from that index onward.
+###rest `_.rest(array, [index])` Alias: **tail, drop** 
+Returns the rest of the elements in an array. Pass an index to return the values of the array from that index onward.  
+配列の最初の要素以外を返します。indexを与えると、そのindexから最後までの要素を取得します。  
+
     _.rest([5, 4, 3, 2, 1]);
     => [4, 3, 2, 1]
 
 ###compact `_.compact(array)` 
-Returns a copy of the array with all falsy values removed. In JavaScript, false, null, 0, "", undefined and NaN are all falsy.
+Returns a copy of the array with all falsy values removed. In JavaScript, false, null, 0, "", undefined and NaN are all falsy.  
+falseを振る舞う要素を除いた配列のコピーを返します。JavaScriptにおいて、false、null、0、""、undefinedはfalse値を取ります。  
+
     _.compact([0, 1, false, 2, '', 3]);
     => [1, 2, 3]
 
 ###flatten `_.flatten(array, [shallow])` 
-Flattens a nested array (the nesting can be to any depth). If you pass shallow, the array will only be flattened a single level.
+Flattens a nested array (the nesting can be to any depth). If you pass shallow, the array will only be flattened a single level.  
+入れ子になった配列を平坦化します。shallowにtrueを与えると、第一階層のみ平坦化されます。  
+
     _.flatten([1, [2], [3, [[4]]]]);
     => [1, 2, 3, 4];
     
@@ -39,30 +51,37 @@ Flattens a nested array (the nesting can be to any depth). If you pass shallow, 
     => [1, 2, 3, [[4]]];
 
 ###without `_.without(array, [*values])` 
-Returns a copy of the array with all instances of the values removed.
+Returns a copy of the array with all instances of the values removed.  
+指定の値を要素から除いた配列のコピーを返します。  
 
     _.without([1, 2, 1, 0, 3, 1, 4], 0, 1);
     => [2, 3, 4]
 
 ###union `_.union(*arrays)` 
-Computes the union of the passed-in arrays: the list of unique items, in order, that are present in one or more of the arrays.
+Computes the union of the passed-in arrays: the list of unique items, in order, that are present in one or more of the arrays.  
+与えられた配列の要素から、ユニークな値を要素とする配列を返します。  
 
     _.union([1, 2, 3], [101, 2, 1, 10], [2, 1]);
     => [1, 2, 3, 101, 10]
 
 ###intersection `_.intersection(*arrays)` 
-Computes the list of values that are the intersection of all the arrays. Each value in the result is present in each of the arrays.
+Computes the list of values that are the intersection of all the arrays. Each value in the result is present in each of the arrays.  
+与えられたそれぞれの配列で、重複する値を要素とする配列を返します。  
 
     _.intersection([1, 2, 3], [101, 2, 1, 10], [2, 1]);
     => [1, 2]
 
 ###difference `_.difference(array, *others)` 
-Similar to without, but returns the values from array that are not present in the other arrays.
+Similar to without, but returns the values from array that are not present in the other arrays.  
+without関数と似ていますが、指定の配列に存在しない値を返します。  
+
     _.difference([1, 2, 3, 4, 5], [5, 2, 10]);
     => [1, 3, 4]
 
-###uniq `_.uniq(array, [isSorted], [iterator])` Alias: 'unique' 
+###uniq `_.uniq(array, [isSorted], [iterator])` Alias: **unique** 
 Produces a duplicate-free version of the array, using === to test object equality. If you know in advance that the array is sorted, passing true for isSorted will run a much faster algorithm. If you want to compute unique items based on a transformation, pass an iterator function.
+値の比較に"==="を使用し、ユニークな値を要素とする配列を返します。要素がソートされても良ければ、isSortedにtrueを与えることで、より高速に実行されます。ユニークな値を独自に走査したい場合はiteratorに比較関数を渡して下さい。  
+
     _.uniq([1, 2, 1, 3, 1, 4]);
     => [1, 2, 3, 4]
 
