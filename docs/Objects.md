@@ -1,6 +1,6 @@
 + 元文書 [underscore/index.html at a5ea59ad16d478a3643f6440ea94ac19ae86f0d4 · documentcloud/underscore · GitHub](https://github.com/documentcloud/underscore/blob/a5ea59ad16d478a3643f6440ea94ac19ae86f0d4/index.html "underscore/index.html at a5ea59ad16d478a3643f6440ea94ac19ae86f0d4 · documentcloud/underscore · GitHub")
 
-## オブジェクト関数 Object Functions [原文](http://underscorejs.org/#objects)
+## オブジェクト関数 [原文](http://underscorejs.org/#objects)
 
 ### keys `_.keys(object)` [原文](http://underscorejs.org/#keys)
 
@@ -160,7 +160,7 @@ _.has({a: 1, b: 2, c: 3}, "b");
 Performs an optimized deep comparison between the two objects, to determine if they
 should be considered equal.
 
-それらが等しいと見なされるべきであるかどうかを判断するには、2つのオブジェクト間最適化された深い比較は、実行されます。
+等しいものとするべきかどうか判断するために、2つのオブジェクト間で最適化された深い比較を行います。
 
 ```javascript
 var moe   = {name : 'moe', luckyNumbers : [13, 27, 34]};
@@ -319,7 +319,7 @@ _.isRegExp(/moe/);
 ### isNaN `_.isNaN(object)` [原文](http://underscorejs.org/#isNaN)
 
 Returns _true_ if **object** is _NaN_.
-Note: this is not the same as the native **isNaN** function, which will also return true if
+Note: this is not the same as the native **isNaN** function, which will also return true if 
 the variable is _undefined_.
 
 **object** が _NaN_ の場合、 _true_ を返します。
