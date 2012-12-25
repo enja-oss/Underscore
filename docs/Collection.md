@@ -23,3 +23,12 @@ _.map([1, 2, 3], function(num){ return num * 3; });
 _.map({one : 1, two : 2, three : 3}, function(num, key){ return num * 3; });
 => [3, 6, 9]
 ```
+
+### reduce `_.reduce(list, iterator, memo, [context])` _Alias: **inject, foldl**_ [原文](http://underscorejs.org/#reduce)
+
+**inject** や **reduce** として知られている、 **reduce** は **list** の値を単一の値に要約します。 **Memo** は減算の最初の状態で、 **iterator** のそれぞれ成功した段階でこれを返します。イテレータは4つの引数を取ります：`memo`、`value`と繰り返しの`index`(またはキー)、そして最後に`list`全ての参照です。
+
+```javascript
+var sum = _.reduce([1, 2, 3], function(memo, num){ return memo + num; }, 0);
+=> 6
+```
