@@ -5,7 +5,7 @@
 Note: All array functions will also work on the arguments object. However, Underscore functions are not designed to work on "sparse" arrays.  
 注: 全ての配列関数は、オブジェクトを引数に取ることができます。しかし、まばらな配列に対して実行できるようには設計されていません。  
 
-###first `_.first(array, [n])` Alias: **head, take**
+###first `_.first(array, [n])` _Alias: head, take_ 
 Returns the first element of an array. Passing n will return the first n elements of the array.  
 配列の最初の要素を返します。nを与えると、配列の最初のn個の要素を返します。  
 
@@ -26,7 +26,7 @@ Returns the last element of an array. Passing n will return the last n elements 
     _.last([5, 4, 3, 2, 1]);
     => 1
 
-###rest `_.rest(array, [index])` Alias: **tail, drop** 
+###rest `_.rest(array, [index])` _Alias: tail, drop_ 
 Returns the rest of the elements in an array. Pass an index to return the values of the array from that index onward.  
 配列の最初の要素以外を返します。indexを与えると、そのindexから最後までの要素を取得します。  
 
@@ -78,7 +78,7 @@ without関数と似ていますが、指定の配列に存在しない値を返�
     _.difference([1, 2, 3, 4, 5], [5, 2, 10]);
     => [1, 3, 4]
 
-###uniq `_.uniq(array, [isSorted], [iterator])` Alias: **unique** 
+###uniq `_.uniq(array, [isSorted], [iterator])` _Alias: unique_ 
 Produces a duplicate-free version of the array, using === to test object equality. If you know in advance that the array is sorted, passing true for isSorted will run a much faster algorithm. If you want to compute unique items based on a transformation, pass an iterator function.
 値の比較に"==="を使用し、ユニークな値を要素とする配列を返します。配列がソートされても良ければ、isSortedにtrueを与えることで、より高速に実行されます。ユニークな値を独自に走査したい場合はiteratorに比較関数を渡して下さい。  
 
@@ -94,7 +94,7 @@ Merges together the values of each of the arrays with the values at the correspo
 
 ###object `_.object(list, [values])` 
 Converts arrays into objects. Pass either a single list of [key, value] pairs, or a list of keys, and a list of values.  
-配列をオブジェクトに変換します。単一のkeyとvalueのペア、keysのリスト、valuesのリストのいずれかを与えて下さい。  
+配列をオブジェクトに変換します。keyとvalueがペアになっている要素の配列、もしくはkeysのリストとvaluesのリスト、どちらかを引数に取ります。  
 
     _.object(['moe', 'larry', 'curly'], [30, 40, 50]);
     => {moe: 30, larry: 40, curly: 50}
@@ -118,7 +118,7 @@ Returns the index of the last occurrence of value in the array, or -1 if value i
 
 ###sortedIndex `_.sortedIndex(list, value, [iterator])` 
 Uses a binary search to determine the index at which the value should be inserted into the list in order to maintain the list's sorted order. If an iterator is passed, it will be used to compute the sort ranking of each value, including the value you pass.  
-指定の値が配列に挿入されソートされたときに、どの位置に挿入されるかを、二分探索で検索し取得します。iteratorを与えると、配列はそれを比較関数としてソートされます。  
+指定の値が配列に挿入されソートされたときに、どの位置に挿入されるかを、二分探索で検索し取得します。iteratorを与えると、それを比較関数としてソートします。  
 
     _.sortedIndex([10, 20, 30, 40, 50], 35);
     => 3
