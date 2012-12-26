@@ -68,7 +68,7 @@ return the **destination** object. It's in-order, so the last source will overri
 of the same name in previous arguments.
 
 **source** オブジェクトの全プロパティを **destination** オブジェクトにコピーして、 **destination** オブジェクトを返します。
-整理すると、source は一つめの引数にある同じ名前のプロパティを上書きします。
+整理すると、二つめの引数の source は一つめの引数にある同じ名前のプロパティを上書きします。
 
 ```javascript
 _.extend({name : 'moe'}, {age : 50});
@@ -79,7 +79,7 @@ _.extend({name : 'moe'}, {age : 50});
 
 Return a copy of the **object**, filtered to only have values for the whitelisted **keys** (or array of valid keys).
 
-ホワイトリストとして指定したキー(もしくは有効にするキーの配列)の値だけ持つようにするために、フィルタリングした **object** のコピーを返します。
+ホワイトリストとして指定したキー(もしくは有効にするキーの配列)の値だけ持つようにフィルタリングした **object** のコピーを返します。
 
 ```javascript
 _.pick({name : 'moe', age: 50, userid : 'moe1'}, 'name', 'age');
@@ -90,7 +90,7 @@ _.pick({name : 'moe', age: 50, userid : 'moe1'}, 'name', 'age');
 
 Return a copy of the **object**, filtered to omit the blacklisted **keys** (or array of keys).
 
-ブラックリストとして指定したキー(もしくはキーの配列)を省略するために、フィルタリングした **object** のコピーを返します。
+ブラックリストとして指定したキー(もしくはキーの配列)を省略するようにフィルタリングした **object** のコピーを返します。
 
 ```javascript
 _.omit({name : 'moe', age : 50, userid : 'moe1'}, 'userid');
@@ -102,7 +102,7 @@ _.omit({name : 'moe', age : 50, userid : 'moe1'}, 'userid');
 Fill in null and undefined properties in **object** with values from the **defaults** objects,
 and return the **object**. As soon as the property is filled, further defaults will have no effect.
 
-**defaults** オブジェクトにある値で、 **object** のnullとundefinedのプロパティに挿入し、その **object** を返します。
+**defaults** オブジェクトにある値を **object** のnullとundefinedのプロパティに挿入し、その **object** を返します。
 プロパティが挿入される際は、 defaults は影響を受けません。
 
 ```javascript
@@ -129,8 +129,8 @@ _.clone({name : 'moe'});
 Invokes **interceptor** with the **object**, and then returns **object**.
 The primary purpose of this method is to "tap into" a method chain, in order to perform operations on intermediate results within the chain.
 
-**object** に **割り込み処理** を割り当て、 **object** を返します。
-このメソッドの一番の目的は、チェーン内の途中の結果を操作するためにメソッドチェーンを利用することです。
+**object** に **割り込み処理** を差し込んでから **object** を返します。
+このメソッドの主な目的は、チェーン内の途中の結果を操作するためにメソッドチェーンを利用することです。
 
 ```javascript
 _.chain([1,2,3,200])
@@ -148,7 +148,7 @@ Does the object contain the given key?
 Identical to `object.hasOwnProperty(key)`, but uses a safe reference to the `hasOwnProperty` function, in case it's been [overridden accidentally](http://www.devthought.com/2012/01/18/an-object-is-not-a-hash/).
 
 objectに渡されたキーが含まれているかチェックします。
-`object.hasOwnProperty(key)` と同じですが、[誤って上書きされる](http://www.devthought.com/2012/01/18/an-object-is-not-a-hash/) 場合がある `hasOwnProperty` 関数への参照を安全にしています。
+`object.hasOwnProperty(key)` と同じですが、[誤って上書きされる](http://www.devthought.com/2012/01/18/an-object-is-not-a-hash/) 場合がある `hasOwnProperty` 関数への参照を安全に行えます。
 
 ```javascript
 _.has({a: 1, b: 2, c: 3}, "b");
