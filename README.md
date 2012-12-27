@@ -42,6 +42,7 @@ en.ja-ossプロジェクトでは現在管理者を募集しています。
 
 - [Intoduction](https://github.com/enja-oss/Underscore/blob/master/docs/Introduction.md)
 - [Arrays](https://github.com/enja-oss/Underscore/blob/master/docs/Arrays.md)
+- [Objects]((https://github.com/enja-oss/Underscore/blob/master/docs/Objects.md)
 - [Utility](https://github.com/enja-oss/Underscore/blob/master/docs/Utility.md)
 - [Chaining](https://github.com/enja-oss/Underscore/blob/master/docs/Chaining.md)
 - [Links & Suggested Reading](https://github.com/enja-oss/Underscore/blob/master/docs/Links-and-Suggested-reading.md)
@@ -50,7 +51,6 @@ en.ja-ossプロジェクトでは現在管理者を募集しています。
 
 - [Collections](http://underscorejs.org/#collections) [@Layzie](https://github.com/Layzie)
 - [Functions](http://underscorejs.org/#functions)[@hoisjp](https://github.com/hoisjp)
-- [Objects](http://underscorejs.org/#objects)[@tokuda109](https://github.com/tokuda109)
 - [annotated source code](http://underscorejs.org/docs/underscore.html) [@ahomu](https://github.com/ahomu)
 
 ##未着手コンテンツ
@@ -80,3 +80,4 @@ Underscore.jsのライセンスを引き継ぎ、すべてMIT Licenseとしま�
 - [@studiomohawk](https://github.com/studiomohawk) Chaining, Links & Suggested Reading
 - [@mitsuruog](https://github.com/mitsuruog) Utility
 - [@1000ch](https://github.com/1000ch) Arrays
+- [@tokuda109](https://github.com/tokuda109) Objects
