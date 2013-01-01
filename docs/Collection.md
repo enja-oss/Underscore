@@ -32,3 +32,14 @@ _.map({one : 1, two : 2, three : 3}, function(num, key){ return num * 3; });
 var sum = _.reduce([1, 2, 3], function(memo, num){ return memo + num; }, 0);
 => 6
 ```
+
+### reduceRight `_.reduceRight(list, iterator, memo, [context])` _Alias: **foldr**_ [原文](http://underscorejs.org/#reduceRight)
+
+右から結合するバージョンの **reduce** です。存在する場合は、JavaScript 1.8バージョンの **reduceRight** に委譲します。 **Foldr** は遅延評価される言語としてのJavaScriptでは有用ではありません。
+
+```javascript
+var list = [[0, 1], [2, 3], [4, 5]];
+var flat = _.reduceRight(list, function(a, b) { return a.concat(b); }, []);
+=&gt; [4, 5, 2, 3, 0, 1]
+```
+
