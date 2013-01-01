@@ -43,3 +43,11 @@ var flat = _.reduceRight(list, function(a, b) { return a.concat(b); }, []);
 =&gt; [4, 5, 2, 3, 0, 1]
 ```
 
+### find `_.find(list, iterator, [context])` _Alias: **detect**_ [原文](http://underscorejs.org/#find)
+
+**list** 内のそれぞれの値を調べていき、テストをtrueで通った最初のもの(**iterator**)を返します。この関数は適合した要素を見つけ次第返し、全てのリストを探索はしません。
+
+```javascript
+var even = _.find([1, 2, 3, 4, 5, 6], function(num){ return num % 2 == 0; });
+=> 2
+```
