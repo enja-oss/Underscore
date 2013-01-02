@@ -61,7 +61,7 @@ var evens = _.filter([1, 2, 3, 4, 5, 6], function(num){ return num % 2 == 0; });
 => [2, 4, 6]
 ```
 
-### where `_.where(list, properties)`
+### where `_.where(list, properties)` [原文](http://underscorejs.org/#where)
 
 **list** 内のそれぞれの値を調べていき、 **properties** で列挙された中で全てのkey-valueペアを含んだ値を全て配列として返します。
 
