@@ -51,3 +51,12 @@ var flat = _.reduceRight(list, function(a, b) { return a.concat(b); }, []);
 var even = _.find([1, 2, 3, 4, 5, 6], function(num){ return num % 2 == 0; });
 => 2
 ```
+
+### filter `_.filter(list, iterator, [context])` _Alias: **select**_ [原文](http://underscorejs.org/#filter)
+
+**list** 内のそれぞれの値を調べていき、テストをtrueで通った全ての値(**iterator**)を返します。ネイティブの **filter** メソッドがある場合には委譲します。
+
+```javascript
+var evens = _.filter([1, 2, 3, 4, 5, 6], function(num){ return num % 2 == 0; });
+=> [2, 4, 6]
+```
