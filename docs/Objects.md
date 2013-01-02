@@ -79,7 +79,7 @@ _.extend({name : 'moe'}, {age : 50});
 
 Return a copy of the **object**, filtered to only have values for the whitelisted **keys** (or array of valid keys).
 
-ホワイトリストとして指定したキー(もしくは有効にするキーの配列)の値だけ持つようにフィルタリングした **object** のコピーを返します。
+ホワイトリストとして指定したキー(もしくは有効なキーの配列)の値だけ持つようにフィルタリングした **object** のコピーを返します。
 
 ```javascript
 _.pick({name : 'moe', age: 50, userid : 'moe1'}, 'name', 'age');
@@ -103,7 +103,7 @@ Fill in null and undefined properties in **object** with values from the **defau
 and return the **object**. As soon as the property is filled, further defaults will have no effect.
 
 **defaults** オブジェクトにある値を **object** のnullとundefinedのプロパティに挿入し、その **object** を返します。
-プロパティが挿入される際は、 defaults は影響を受けません。
+プロパティが挿入され次第、以降のdefaults引数は影響を受けません。
 
 ```javascript
 var iceCream = {flavor : "chocolate"};
@@ -129,7 +129,7 @@ _.clone({name : 'moe'});
 Invokes **interceptor** with the **object**, and then returns **object**.
 The primary purpose of this method is to "tap into" a method chain, in order to perform operations on intermediate results within the chain.
 
-**object** に **割り込み処理** を差し込んでから **object** を返します。
+**interceptor** に **割り込み処理** を差し込んでから **object** を返します。
 このメソッドの主な目的は、チェーン内の途中の結果を操作するためにメソッドチェーンを利用することです。
 
 ```javascript
