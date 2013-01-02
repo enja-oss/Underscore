@@ -60,3 +60,13 @@ var even = _.find([1, 2, 3, 4, 5, 6], function(num){ return num % 2 == 0; });
 var evens = _.filter([1, 2, 3, 4, 5, 6], function(num){ return num % 2 == 0; });
 => [2, 4, 6]
 ```
+
+### where `_.where(list, properties)`
+
+**list** 内のそれぞれの値を調べていき、 **properties** で列挙された中で全てのkey-valueペアを含んだ値を全て配列として返します。
+
+```javascript
+_.where(listOfPlays, {author: "Shakespeare", year: 1611});
+=> [{title: "Cymbeline", author: "Shakespeare", year: 1611},
+    {title: "The Tempest", author: "Shakespeare", year: 1611}]
+```
