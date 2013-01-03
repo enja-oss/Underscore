@@ -88,3 +88,13 @@ var odds = _.reject([1, 2, 3, 4, 5, 6], function(num){ return num % 2 == 0; });
 _.every([true, 1, null, 'yes'], _.identity);
 =>; false
 ```
+
+### some `_.some(list, [iterator], [context])` _Alias: **any**_ [原文](http://underscorejs.org/#some)
+
+**list** 内の値が1つでも **iterator** のテストをtrueで通った場合に、 _true_ を返します。trueを返す要素が見つかった場合は、探索を中断して、リストを遡るのを止めます。
+
+```javascript
+_.some([null, 0, 'yes', false]);
+=> true
+```
+
