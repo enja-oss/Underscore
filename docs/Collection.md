@@ -70,3 +70,12 @@ _.where(listOfPlays, {author: "Shakespeare", year: 1611});
 => [{title: "Cymbeline", author: "Shakespeare", year: 1611},
     {title: "The Tempest", author: "Shakespeare", year: 1611}]
 ```
+
+### reject `_.reject(list, iterator, [context])` [原文](http://underscorejs.org/#reject)
+
+テストをtrueで通った要素(**iterator**)を除いた **list** 内の値を返します。 **filter** の反対です。
+
+```javascript
+var odds = _.reject([1, 2, 3, 4, 5, 6], function(num){ return num % 2 == 0; });
+=>; [1, 3, 5]
+```
