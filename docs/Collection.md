@@ -79,3 +79,12 @@ _.where(listOfPlays, {author: "Shakespeare", year: 1611});
 var odds = _.reject([1, 2, 3, 4, 5, 6], function(num){ return num % 2 == 0; });
 =>; [1, 3, 5]
 ```
+
+### every `_.every(list, iterator, [context])` _Alias: **all**_ [原文](http://underscorejs.org/#every)
+
+**list** 内の値が全て **iterator** のテストをtrueで通った場合に、 _true_ を返します。存在する場合はネイティブメソッドの **every** に委譲します。
+
+```javascript
+_.every([true, 1, null, 'yes'], _.identity);
+=>; false
+```
