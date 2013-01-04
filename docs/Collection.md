@@ -19,7 +19,7 @@ _.each({one : 1, two : 2, three : 3}, alert);
 
 ```javascript
 _.map([1, 2, 3], function(num){ return num * 3; });
-=>; [3, 6, 9]
+=> [3, 6, 9]
 _.map({one : 1, two : 2, three : 3}, function(num, key){ return num * 3; });
 => [3, 6, 9]
 ```
@@ -40,7 +40,7 @@ var sum = _.reduce([1, 2, 3], function(memo, num){ return memo + num; }, 0);
 ```javascript
 var list = [[0, 1], [2, 3], [4, 5]];
 var flat = _.reduceRight(list, function(a, b) { return a.concat(b); }, []);
-=&gt; [4, 5, 2, 3, 0, 1]
+=> [4, 5, 2, 3, 0, 1]
 ```
 
 ### find `_.find(list, iterator, [context])` _Alias: **detect**_ [原文](http://underscorejs.org/#find)
@@ -77,7 +77,7 @@ _.where(listOfPlays, {author: "Shakespeare", year: 1611});
 
 ```javascript
 var odds = _.reject([1, 2, 3, 4, 5, 6], function(num){ return num % 2 == 0; });
-=>; [1, 3, 5]
+=> [1, 3, 5]
 ```
 
 ### every `_.every(list, iterator, [context])` _Alias: **all**_ [原文](http://underscorejs.org/#every)
@@ -86,7 +86,7 @@ var odds = _.reject([1, 2, 3, 4, 5, 6], function(num){ return num % 2 == 0; });
 
 ```javascript
 _.every([true, 1, null, 'yes'], _.identity);
-=>; false
+=> false
 ```
 
 ### some `_.some(list, [iterator], [context])` _Alias: **any**_ [原文](http://underscorejs.org/#some)
