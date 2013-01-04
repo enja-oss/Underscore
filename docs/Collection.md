@@ -98,3 +98,11 @@ _.some([null, 0, 'yes', false]);
 => true
 ```
 
+### contains `_.contains(list, value)` _Alias: **include**_ [原文](http://underscorejs.org/#contains)
+
+**value** が **list** 内に存在する場合には _true_ を返します。 **list** が配列の際には、内部的に **indexOf** が使用されます。
+
+```javascript
+_.contains([1, 2, 3], 3);
+=> true
+```
