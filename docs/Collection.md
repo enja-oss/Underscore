@@ -106,3 +106,12 @@ _.some([null, 0, 'yes', false]);
 _.contains([1, 2, 3], 3);
 => true
 ```
+
+### invoke `_.invoke(list, methodName, [*arguments])` [原文](http://underscorejs.org/#invoke)
+
+**ist** 内のそれぞれの値に対して **methodName** で指定されたメソッドを呼び出します。 **invoke** に渡されたどんな追加引数もこのメソッド呼び出しに送られます。
+
+```javascript
+_.invoke([[5, 1, 7], [3, 2, 1]], 'sort');
+=> [[1, 5, 7], [1, 2, 3]]
+```
