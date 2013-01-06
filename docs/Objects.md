@@ -4,8 +4,6 @@
 
 ### keys `_.keys(object)` [原文](http://underscorejs.org/#keys)
 
-Retrieve all the names of the **object**'s properties.
-
 **object** のプロパティ名を全て探索する。
 
 ```javascript
@@ -14,8 +12,6 @@ _.keys({one : 1, two : 2, three : 3});
 ```
 
 ### values `_.values(object)` [原文](http://underscorejs.org/#values)
-
-Return all of the values of the **object**'s properties.
 
 **object** のプロパティの値を全て返す。
 
@@ -26,8 +22,6 @@ _.values({one : 1, two : 2, three : 3});
 
 ### pairs `_.pairs(object)` [原文](http://underscorejs.org/#pairs)
 
-Convert an object into a list of `[key, value]` pairs.
-
 objectを `[key, value]` のペアになっているリストに変換する。
 
 ```javascript
@@ -36,9 +30,6 @@ _.pairs({one: 1, two: 2, three: 3});
 ```
 
 ### invert `_.invert(object)` [原文](http://underscorejs.org/#invert)
-
-Returns a copy of the **object** where the keys have become the values and the values the keys.
-For this to work, all of your object's values should be unique and string serializable.
 
 キーを値に、値をキーにした **object** のコピーを返す。
 この関数が機能するためには、オブジェクトのすべての値がユニークでシリアライズ可能な文字列である必要があります。
@@ -50,9 +41,6 @@ _.invert({Moe: "Moses", Larry: "Louis", Curly: "Jerome"});
 
 ### functions `_.functions(object)` _Alias: methods_ [原文](http://underscorejs.org/#object-functions)
 
-Returns a sorted list of the names of every method in an object — that is to say, the
-name of every function property of the object.
-
 オブジェクトの全てのメソッド名のソートされたリストを返します。
 すなわち、オブジェクトの全ての関数のプロパティ名のことです。
 
@@ -62,10 +50,6 @@ _.functions(_);
 ```
 
 ### extend `_.extend(destination, *sources)` [原文](http://underscorejs.org/#extend)
-
-Copy all of the properties in the **source** objects over to the **destination** object, and
-return the **destination** object. It's in-order, so the last source will override properties
-of the same name in previous arguments.
 
 **source** オブジェクトの全プロパティを **destination** オブジェクトにコピーして、 **destination** オブジェクトを返します。
 整理すると、二つめの引数の source は一つめの引数にある同じ名前のプロパティを上書きします。
@@ -77,8 +61,6 @@ _.extend({name : 'moe'}, {age : 50});
 
 ### pick `_.pick(object, *keys)` [原文](http://underscorejs.org/#pick)
 
-Return a copy of the **object**, filtered to only have values for the whitelisted **keys** (or array of valid keys).
-
 ホワイトリストとして指定したキー(もしくは有効なキーの配列)の値だけ持つようにフィルタリングした **object** のコピーを返します。
 
 ```javascript
@@ -88,8 +70,6 @@ _.pick({name : 'moe', age: 50, userid : 'moe1'}, 'name', 'age');
 
 ### omit `_.omit(object, *keys)` [原文](http://underscorejs.org/#omit)
 
-Return a copy of the **object**, filtered to omit the blacklisted **keys** (or array of keys).
-
 ブラックリストとして指定したキー(もしくはキーの配列)を省略するようにフィルタリングした **object** のコピーを返します。
 
 ```javascript
@@ -98,9 +78,6 @@ _.omit({name : 'moe', age : 50, userid : 'moe1'}, 'userid');
 ```
 
 ### defaults `_.defaults(object, *defaults)` [原文](http://underscorejs.org/#defaults)
-
-Fill in null and undefined properties in **object** with values from the **defaults** objects,
-and return the **object**. As soon as the property is filled, further defaults will have no effect.
 
 **defaults** オブジェクトにある値を **object** のnullとundefinedのプロパティに挿入し、その **object** を返します。
 プロパティが挿入され次第、以降のdefaults引数は影響を受けません。
@@ -113,9 +90,6 @@ _.defaults(iceCream, {flavor : "vanilla", sprinkles : "lots"});
 
 ### clone `_.clone(object)` [原文](http://underscorejs.org/#clone)
 
-Create a shallow-copied clone of the **object**.
-Any nested objects or arrays will be copied by reference, not duplicated.
-
 **object** の浅いコピーをしたクローンを作成します。
 ネストされたオブジェクトや配列は参照によるコピーで、複製されたものではありません。
 
@@ -125,9 +99,6 @@ _.clone({name : 'moe'});
 ```
 
 ### tap `_.tap(object, interceptor)` [原文](http://underscorejs.org/#tap)
-
-Invokes **interceptor** with the **object**, and then returns **object**.
-The primary purpose of this method is to "tap into" a method chain, in order to perform operations on intermediate results within the chain.
 
 **interceptor** に **割り込み処理** を差し込んでから **object** を返します。
 このメソッドの主な目的は、チェーン内の途中の結果を操作するためにメソッドチェーンを利用することです。
@@ -144,9 +115,6 @@ _.chain([1,2,3,200])
 
 ### has `_.has(object, key)` [原文](http://underscorejs.org/#has)
 
-Does the object contain the given key?
-Identical to `object.hasOwnProperty(key)`, but uses a safe reference to the `hasOwnProperty` function, in case it's been [overridden accidentally](http://www.devthought.com/2012/01/18/an-object-is-not-a-hash/).
-
 objectに渡されたキーが含まれているかチェックします。
 `object.hasOwnProperty(key)` と同じですが、[誤って上書きされる](http://www.devthought.com/2012/01/18/an-object-is-not-a-hash/) 場合がある `hasOwnProperty` 関数への参照を安全に行えます。
 
@@ -156,9 +124,6 @@ _.has({a: 1, b: 2, c: 3}, "b");
 ```
 
 ### isEqual `_.isEqual(object, other)` [原文](http://underscorejs.org/#isEqual)
-
-Performs an optimized deep comparison between the two objects, to determine if they
-should be considered equal.
 
 等しいものとするべきかどうか判断するために、2つのオブジェクト間で最適化された深い比較を行います。
 
@@ -173,8 +138,6 @@ _.isEqual(moe, clone);
 
 ### isEmpty `_.isEmpty(object)` [原文](http://underscorejs.org/#isEmpty)
 
-Returns _true_ if **object** contains no values.
-
 **object** に値が含まれていない場合、 _true_ を返します。
 
 ```javascript
@@ -186,8 +149,6 @@ _.isEmpty({});
 
 ### isElement `_.isElement(object)` [原文](http://underscorejs.org/#isElement)
 
-Returns _true_ if **object** is a DOM element.
-
 **object** がDOM要素の場合、 _true_ を返します。
 
 ```javascript
@@ -196,8 +157,6 @@ _.isElement(jQuery('body')[0]);
 ```
 
 ### isArray `_.isArray(object)` [原文](http://underscorejs.org/#isArray)
-
-Returns _true_ if **object** is an Array.
 
 **object** が配列の場合、 _true_ を返します。
 
@@ -209,9 +168,6 @@ _.isArray([1,2,3]);
 ```
 
 ### isObject `_.isObject(value)` [原文](http://underscorejs.org/#isObject)
-
-Returns _true_ if **value** is an Object.
-Note that JavaScript arrays and functions are objects, while (normal) strings and numbers are not.
 
 **value** がオブジェクトの場合、 _true_ を返します。
 注：JavaScriptの配列と関数はオブジェクトで、(普通の)文字列や整数はオブジェクトではありません。
@@ -225,8 +181,6 @@ _.isObject(1);
 
 ### isArguments `_.isArguments(object)` [原文](http://underscorejs.org/#isArguments)
 
-Returns _true_ if **object** is an Arguments object.
-
 **object** がArgumentsオブジェクトの場合、 _true_ を返します。
 
 ```javascript
@@ -238,8 +192,6 @@ _.isArguments([1,2,3]);
 
 ### isFunction `_.isFunction(object)` [原文](http://underscorejs.org/#isFunction)
 
-Returns _true_ if **object** is a Function.
-
 **object** が関数の場合、 _true_ を返します。
 
 ```javascript
@@ -248,8 +200,6 @@ _.isFunction(alert);
 ```
 
 ### isString `_.isString(object)` [原文](http://underscorejs.org/#isString)
-
-Returns _true_ if **object** is a String.
 
 **object** が文字列の場合、 _true_ を返します。
 
@@ -260,8 +210,6 @@ _.isString("moe");
 
 ### isNumber `_.isNumber(object)` [原文](http://underscorejs.org/#isNumber)
 
-Returns _true_ if **object** is a Number (including `NaN`).
-
 **object** が整数(`NaN` を含む)の場合、 _true_ を返します。
 
 ```javascript
@@ -270,8 +218,6 @@ _.isNumber(8.4 * 5);
 ```
 
 ### isFinite `_.isFinite(object)` [原文](http://underscorejs.org/#isFinite)
-
-Returns _true_ if **object** is a finite Number.
 
 **object** が有限数の場合、 _true_ を返します。
 
@@ -285,8 +231,6 @@ _.isFinite(-Infinity);
 
 ### isBoolean `_.isBoolean(object)` [原文](http://underscorejs.org/#isBoolean)
 
-Returns _true_ if **object** is either _true_ or _false_.
-
 **object** が _true_ か _false_ のどちらかの場合、 _true_ を返します。
 
 ```javascript
@@ -295,8 +239,6 @@ _.isBoolean(null);
 ```
 
 ### isDate `_.isDate(object)` [原文](http://underscorejs.org/#isDate)
-
-Returns _true_ if **object** is a Date.
 
 **object** が日付オブジェクトの場合、 _true_ を返します。
 
@@ -307,8 +249,6 @@ _.isDate(new Date());
 
 ### isRegExp `_.isRegExp(object)` [原文](http://underscorejs.org/#isRegExp)
 
-Returns _true_ if **object** is a RegExp.
-
 **object** が正規表現オブジェクトの場合、 _true_ を返します。
 
 ```javascript
@@ -317,10 +257,6 @@ _.isRegExp(/moe/);
 ```
 
 ### isNaN `_.isNaN(object)` [原文](http://underscorejs.org/#isNaN)
-
-Returns _true_ if **object** is _NaN_.
-Note: this is not the same as the native **isNaN** function, which will also return true if 
-the variable is _undefined_.
 
 **object** が _NaN_ の場合、 _true_ を返します。
 注：この関数は、変数が _undefined_ の時に true が返される組み込みの **isNaN** 関数と同じではありません。
@@ -336,8 +272,6 @@ _.isNaN(undefined);
 
 ### isNull `_.isNull(object)` [原文](http://underscorejs.org/#isNull)
 
-Returns _true_ if the **value** of object is _null_.
-
 objectの **値** が _null_ の場合、 _true_ を返します。
 
 ```javascript
@@ -348,8 +282,6 @@ _.isNull(undefined);
 ```
 
 ### isUndefined `_.isUndefined(value)` [原文](http://underscorejs.org/#isUndefined)
-
-Returns _true_ if **value** is _undefined_.
 
 **value** が _undefined_ の場合、 _true_ を返します。
 
