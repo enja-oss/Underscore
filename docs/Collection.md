@@ -154,3 +154,15 @@ _.min(numbers);
 _.sortBy([1, 2, 3, 4, 5, 6], function(num){ return Math.sin(num); });
 => [5, 4, 6, 3, 1, 2]
 ```
+
+### groupBy `_.groupBy(list, iterator)` [原文](http://underscorejs.org/#groupBy)
+
+**iterator** を通して実行したそれぞれの値の結果でグループ分けされたセットとしてコレクションを分割します。 **iterator** が関数の代わりに文字列の場合、それぞれの値に **iterator** で命名されたプロパティによってグループ分けします。
+
+```javascript
+_.groupBy([1.3, 2.1, 2.4], function(num){ return Math.floor(num); });
+=> {1: [1.3], 2: [2.1, 2.4]}
+
+_.groupBy(['one', 'two', 'three'], 'length');
+=> {3: ["one", "two"], 5: ["three"]}
+```
