@@ -135,3 +135,13 @@ var stooges = [{name : 'moe', age : 40}, {name : 'larry', age : 50}, {name : 'cu
 _.max(stooges, function(stooge){ return stooge.age; });
 => {name : 'curly', age : 60};
 ```
+
+### min `_.min(list, [iterator], [context])` [原文](http://underscorejs.org/#min)
+
+**list** 内の最小値を返します。 **iterator** が渡された場合、それぞれの値に対し、ランク付けするための基準を生成するために使用されます。
+
+```javascript
+var numbers = [10, 5, 100, 2, 1000];
+_.min(numbers);
+=> 2
+```
