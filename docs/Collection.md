@@ -145,3 +145,12 @@ var numbers = [10, 5, 100, 2, 1000];
 _.min(numbers);
 => 2
 ```
+
+### sortBy `_.sortBy(list, iterator, [context])` [原文](http://underscorejs.org/#sortBy)
+
+**iterator** を通して実行したそれぞれの値の結果を昇順でランク付けした **list** のソート済みのコピーを返します。イテレータには並べ替えるためのプロパティ名(例：`length`)を文字列で指定することもできます。
+
+```javascript
+_.sortBy([1, 2, 3, 4, 5, 6], function(num){ return Math.sin(num); });
+=> [5, 4, 6, 3, 1, 2]
+```
