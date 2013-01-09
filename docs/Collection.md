@@ -115,3 +115,13 @@ _.contains([1, 2, 3], 3);
 _.invoke([[5, 1, 7], [3, 2, 1]], 'sort');
 => [[1, 5, 7], [1, 2, 3]]
 ```
+
+### pluck `_.pluck(list, propertyName)` [原文](http://underscorejs.org/#pluck)
+
+たぶん **map** のもっとも一般的なユーズケース：プロパティの値のリストを抽出するための便利なバージョンです。
+
+```javascript
+var stooges = [{name : 'moe', age : 40}, {name : 'larry', age : 50}, {name : 'curly', age : 60}];
+_.pluck(stooges, 'name');
+=> ["moe", "larry", "curly"]
+```
