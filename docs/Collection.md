@@ -125,3 +125,13 @@ var stooges = [{name : 'moe', age : 40}, {name : 'larry', age : 50}, {name : 'cu
 _.pluck(stooges, 'name');
 => ["moe", "larry", "curly"]
 ```
+
+### max `_.max(list, [iterator], [context])` [原文](http://underscorejs.org/#max)
+
+**list** 内の最大値を返します。 **iterator** が渡された場合、それぞれの値に対し、ランク付けするための基準を生成するために使用されます。
+
+```javascript
+var stooges = [{name : 'moe', age : 40}, {name : 'larry', age : 50}, {name : 'curly', age : 60}];
+_.max(stooges, function(stooge){ return stooge.age; });
+=> {name : 'curly', age : 60};
+```
