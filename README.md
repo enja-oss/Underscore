@@ -42,7 +42,7 @@ en.ja-ossプロジェクトでは現在管理者を募集しています。
 
 - [Intoduction](https://github.com/enja-oss/Underscore/blob/master/docs/Introduction.md)
 - [Arrays](https://github.com/enja-oss/Underscore/blob/master/docs/Arrays.md)
-- [Functions](https://github.com/enja-oss/Underscore/blob/master/docs/Functions.md)
+- [Functions](https://github.com/enja-oss/Underscore/blob/master/docs/Function.md)
 - [Objects]((https://github.com/enja-oss/Underscore/blob/master/docs/Objects.md)
 - [Utility](https://github.com/enja-oss/Underscore/blob/master/docs/Utility.md)
 - [Chaining](https://github.com/enja-oss/Underscore/blob/master/docs/Chaining.md)
