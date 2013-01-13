@@ -177,3 +177,12 @@ _.countBy([1, 2, 3, 4, 5], function(num) {
 });
 => {odd: 3, even: 2}
 ```
+
+### shuffle `_.shuffle(list)` [原文](http://underscorejs.org/#shuffle)
+
+[Fisher-Yates shuffle](http://en.wikipedia.org/wiki/Fisher%E2%80%93Yates_shuffle)を使いシャッフルされた **list** のコピーを返します。
+
+```javascript
+_.shuffle([1, 2, 3, 4, 5, 6]);
+=> [4, 1, 6, 3, 5, 2]
+```
