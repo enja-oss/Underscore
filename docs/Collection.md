@@ -195,3 +195,12 @@ _.shuffle([1, 2, 3, 4, 5, 6]);
 (function(){ return _.toArray(arguments).slice(1); })(1, 2, 3, 4);
 => [2, 3, 4]
 ```
+
+### size `_.size(list)` [原文](http://underscorejs.org/#size)
+
+**list** 内の値の数を返します。
+
+```javascript
+_.size({one : 1, two : 2, three : 3});
+=> 3
+```
