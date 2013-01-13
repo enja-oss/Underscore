@@ -166,3 +166,14 @@ _.groupBy([1.3, 2.1, 2.4], function(num){ return Math.floor(num); });
 _.groupBy(['one', 'two', 'three'], 'length');
 => {3: ["one", "two"], 5: ["three"]}
 ```
+
+### countBy `_.countBy(list, iterator)` [原文](http://underscorejs.org/#countBy)
+
+グループ内のリストをソートして、各グループのオブジェクトの数を数えて返します。`groupBy`に似ていますが、リストの値を返す代わりにグループ内の数を数えた値を返します。
+
+```javascript
+_.countBy([1, 2, 3, 4, 5], function(num) {
+    return num % 2 == 0 ? 'even' : 'odd';
+});
+=> {odd: 3, even: 2}
+```
