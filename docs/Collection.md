@@ -186,3 +186,12 @@ _.countBy([1, 2, 3, 4, 5], function(num) {
 _.shuffle([1, 2, 3, 4, 5, 6]);
 => [4, 1, 6, 3, 5, 2]
 ```
+
+### toArray `_.toArray(list)` [原文](http://underscorejs.org/#toArray)
+
+**list** (イテレートできるものなら何でも)を本当の配列に変換します。 **arguments** オブジェクトを変換するのに役立ちます。
+
+```javascript
+(function(){ return _.toArray(arguments).slice(1); })(1, 2, 3, 4);
+=> [2, 3, 4]
+```
