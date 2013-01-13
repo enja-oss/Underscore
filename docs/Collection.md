@@ -4,7 +4,7 @@
 
 ### each `_.each(list, iterator, [context])` _Alias: **forEach**_ [原文](http://underscorejs.org/#each)
 
-**list** の要素を繰り返して、それぞれのターンで **iterator** 関数を動作させます。 **iterator** は 引数に渡されていれば **context** オブジェクトから派生します。それぞれの **iterator** の呼び出しは3つの引数から呼ばれます。： `(element, index, list)`です。 **list** がJavaScriptオブジェクトの場合、 **iterator** の引数は`(value, key, list)`となります。ネイティブの **forEach** 関数が存在した場合には委譲します。
+**list** の要素を繰り返して、それぞれの番で **iterator** 関数を動作させます。 **iterator** は 引数に渡されていれば **context** オブジェクトから派生します。それぞれの **iterator** の呼び出しは3つの引数から呼ばれます。： `(element, index, list)`です。 **list** がJavaScriptオブジェクトの場合、 **iterator** の引数は`(value, key, list)`となります。ネイティブの **forEach** 関数が存在した場合には委譲します。
 
 ```javascript
 _.each([1, 2, 3], alert);
@@ -15,7 +15,7 @@ _.each({one : 1, two : 2, three : 3}, alert);
 
 ### map `_.map(list, iterator, [context])` _Alias: **collect**_ [原文](http://underscorejs.org/#map)
 
-変換関数( **iterator** )を通して、 **list** 中の各々の値をマッピングした値を持つ新しい配列を作成します。ネイティブの **map** メソッドが存在する場合は、そちらを代わりに使用します。 **list** がJavaScriptオブジェクトの場合は、 **iterator** の引数は`(value, key, list)`になります。
+変換関数( **iterator** )を通して、 **list** 中のそれぞれの値をマッピングした値を持つ新しい配列を生成します。ネイティブの **map** メソッドが存在する場合は、そちらを代わりに使用します。 **list** がJavaScriptオブジェクトの場合は、 **iterator** の引数は`(value, key, list)`になります。
 
 ```javascript
 _.map([1, 2, 3], function(num){ return num * 3; });
@@ -26,7 +26,7 @@ _.map({one : 1, two : 2, three : 3}, function(num, key){ return num * 3; });
 
 ### reduce `_.reduce(list, iterator, memo, [context])` _Alias: **inject, foldl**_ [原文](http://underscorejs.org/#reduce)
 
-**inject** や **reduce** として知られている、 **reduce** は **list** の値を単一の値に要約します。 **Memo** は減算の最初の状態で、 **iterator** のそれぞれ成功した段階でこれを返します。イテレータは4つの引数を取ります：`memo`、`value`と繰り返しの`index`(またはキー)、そして最後に`list`全ての参照です。
+**inject** や **foldl** として知られてもいますが、 **reduce** は **list** の値を単一の値に要約します。 **Memo** は減算の最初の状態で、 **iterator** のそれぞれ成功した段階でこれを返します。イテレータは4つの引数を取ります：`memo`、`value`と繰り返しの`index`(またはキー)、そして最後に`list`全ての参照です。
 
 ```javascript
 var sum = _.reduce([1, 2, 3], function(memo, num){ return memo + num; }, 0);
@@ -35,7 +35,7 @@ var sum = _.reduce([1, 2, 3], function(memo, num){ return memo + num; }, 0);
 
 ### reduceRight `_.reduceRight(list, iterator, memo, [context])` _Alias: **foldr**_ [原文](http://underscorejs.org/#reduceRight)
 
-右から結合するバージョンの **reduce** です。存在する場合は、JavaScript 1.8バージョンの **reduceRight** に委譲します。 **Foldr** は遅延評価される言語としてのJavaScriptでは有用ではありません。
+右から結合するバージョンの **reduce** です。存在する場合は、JavaScript 1.8バージョンの **reduceRight** に委譲します。 **Foldr** は遅延評価がある言語ほどにはJavaScriptでは有用ではありません。
 
 ```javascript
 var list = [[0, 1], [2, 3], [4, 5]];
@@ -63,7 +63,7 @@ var evens = _.filter([1, 2, 3, 4, 5, 6], function(num){ return num % 2 == 0; });
 
 ### where `_.where(list, properties)` [原文](http://underscorejs.org/#where)
 
-**list** 内のそれぞれの値を調べていき、 **properties** で列挙された中で全てのkey-valueペアを含んだ値を全て配列として返します。
+**list** 内のそれぞれの値を調べていき、 **properties** で列挙された中で全てのkey-valueペアを含んだ全ての値を配列として返します。
 
 ```javascript
 _.where(listOfPlays, {author: "Shakespeare", year: 1611});
@@ -109,7 +109,7 @@ _.contains([1, 2, 3], 3);
 
 ### invoke `_.invoke(list, methodName, [*arguments])` [原文](http://underscorejs.org/#invoke)
 
-**ist** 内のそれぞれの値に対して **methodName** で指定されたメソッドを呼び出します。 **invoke** に渡されたどんな追加引数もこのメソッド呼び出しに送られます。
+**list** 内のそれぞれの値に対して **methodName** で指定されたメソッドを呼び出します。 **invoke** に渡されたどんな追加引数もこのメソッド呼び出しに送られます。
 
 ```javascript
 _.invoke([[5, 1, 7], [3, 2, 1]], 'sort');
@@ -118,7 +118,7 @@ _.invoke([[5, 1, 7], [3, 2, 1]], 'sort');
 
 ### pluck `_.pluck(list, propertyName)` [原文](http://underscorejs.org/#pluck)
 
-たぶん **map** のもっとも一般的なユーズケース：プロパティの値のリストを抽出するための便利なバージョンです。
+たぶん **map** のもっとも一般的なユースケース：プロパティの値のリストを抽出するための便利なバージョンです。
 
 ```javascript
 var stooges = [{name : 'moe', age : 40}, {name : 'larry', age : 50}, {name : 'curly', age : 60}];
@@ -148,7 +148,7 @@ _.min(numbers);
 
 ### sortBy `_.sortBy(list, iterator, [context])` [原文](http://underscorejs.org/#sortBy)
 
-**iterator** を通して実行したそれぞれの値の結果を昇順でランク付けした **list** のソート済みのコピーを返します。イテレータには並べ替えるためのプロパティ名(例：`length`)を文字列で指定することもできます。
+**iterator** を通して実行したそれぞれの値の結果を昇順でランク付けした **list** のソート済みのコピーを返します。イテレータには並べ替えに使うプロパティ名(例：`length`)を文字列で指定することもできます。
 
 ```javascript
 _.sortBy([1, 2, 3, 4, 5, 6], function(num){ return Math.sin(num); });
@@ -157,7 +157,7 @@ _.sortBy([1, 2, 3, 4, 5, 6], function(num){ return Math.sin(num); });
 
 ### groupBy `_.groupBy(list, iterator)` [原文](http://underscorejs.org/#groupBy)
 
-**iterator** を通して実行したそれぞれの値の結果でグループ分けされたセットとしてコレクションを分割します。 **iterator** が関数の代わりに文字列の場合、それぞれの値に **iterator** で命名されたプロパティによってグループ分けします。
+**iterator** を通して実行したそれぞれの値の結果を使いグループ分けされたセットにコレクションを分割します。 **iterator** が関数の代わりに文字列の場合、それぞれの値に対して **iterator** で命名されたプロパティを使ってグループ分けします。
 
 ```javascript
 _.groupBy([1.3, 2.1, 2.4], function(num){ return Math.floor(num); });
