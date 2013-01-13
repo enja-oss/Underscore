@@ -41,6 +41,7 @@ en.ja-ossプロジェクトでは現在管理者を募集しています。
 ##翻訳済みコンテンツ
 
 - [Intoduction](https://github.com/enja-oss/Underscore/blob/master/docs/Introduction.md)
+- [Collections](https://github.com/enja-oss/Underscore/blob/master/docs/Collection.md)
 - [Arrays](https://github.com/enja-oss/Underscore/blob/master/docs/Arrays.md)
 - [Functions](https://github.com/enja-oss/Underscore/blob/master/docs/Function.md)
 - [Objects]((https://github.com/enja-oss/Underscore/blob/master/docs/Objects.md)
@@ -50,7 +51,6 @@ en.ja-ossプロジェクトでは現在管理者を募集しています。
 
 ##着手中/予定コンテンツ
 
-- [Collections](http://underscorejs.org/#collections) [@Layzie](https://github.com/Layzie)
 - [annotated source code](http://underscorejs.org/docs/underscore.html) [@ahomu](https://github.com/ahomu)
 
 ##未着手コンテンツ
@@ -76,7 +76,7 @@ Underscore.jsのライセンスを引き継ぎ、すべてMIT Licenseとしま�
 
 随時追加しています。
 
-- [@Layzie](https://github.com/Layzie) Intoduction
+- [@Layzie](https://github.com/Layzie) Intoduction, Collections
 - [@studiomohawk](https://github.com/studiomohawk) Chaining, Links & Suggested Reading
 - [@mitsuruog](https://github.com/mitsuruog) Utility
 - [@1000ch](https://github.com/1000ch) Arrays
