@@ -1,6 +1,5 @@
 +  元文書: [underscore/index.html at 13016c783570e5af0e1d1e716537916147de0843 · documentcloud/underscore · GitHub](https://github.com/documentcloud/underscore/blob/13016c783570e5af0e1d1e716537916147de0843/index.html)
 
-
 ## Function (uh, ahem) Functions
 
 ### bind `_.bind(function, object, [*arguments])`
