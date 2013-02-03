@@ -17,16 +17,15 @@
   var previousUnderscore = root._;
 
   // Establish the object that gets returned to break out of a loop iteration.
-  // ループの繰り返しから抜け出すために、返されるオブジェクトを定める。
+  // ループの繰り返しから抜け出す際に、返されるオブジェクトを定める。
   var breaker = {};
 
   // Save bytes in the minified (but not gzipped) version:
-  // TODO: pending
-  // 最小化後のバイト数を節約できる
+  // ミニファイ後（ただしGizpされていない）バージョンのバイト数を抑える。
   var ArrayProto = Array.prototype, ObjProto = Object.prototype, FuncProto = Function.prototype;
 
   // Create quick reference variables for speed access to core prototypes.
-  // コアなプロトタイプメソッドに高速でアクセスするために、簡易参照の変数を作成する。
+  // コアなプロトタイプメソッドに素早くアクセスするために、簡易な参照用の変数を作成する。
   var push             = ArrayProto.push,
       slice            = ArrayProto.slice,
       concat           = ArrayProto.concat,
@@ -51,7 +50,7 @@
     nativeBind         = FuncProto.bind;
 
   // Create a safe reference to the Underscore object for use below.
-  // 以下で使用するための、Underscoreオブジェクトへの安全な参照を作成する。
+  // 以降で使用するための、Underscoreオブジェクトへの安全な参照を作成する。
   var _ = function(obj) {
     if (obj instanceof _) return obj;
     if (!(this instanceof _)) return new _(obj);
@@ -268,7 +267,7 @@
 
   // Convenience version of a common use case of `map`: fetching a property.
   // コレクションの各要素からプロパティを取得してくるという、
-  // `map`の一般的な使用用途における軽便バージョン。
+  // `map`の一般的な使用用途における短縮バージョン。
   _.pluck = function(obj, key) {
     return _.map(obj, function(value){ return value[key]; });
   };
@@ -276,7 +275,7 @@
   // Convenience version of a common use case of `filter`: selecting only objects
   // with specific `key:value` pairs.
   // コレクションの各要素から`key:value`ペアを持つオブジェクトのみを選択するという、
-  // `filter`の一般的な使用用途における軽便バージョン。
+  // `filter`の一般的な使用用途における短縮バージョン。
   _.where = function(obj, attrs) {
     if (_.isEmpty(attrs)) return [];
     return _.filter(obj, function(value) {
@@ -376,7 +375,7 @@
 
   // Groups the object's values by a criterion. Pass either a string attribute
   // to group by, or a function that returns the criterion.
-  // 基準によるオブジェクトの値のグループ。
+  // 基準によってオブジェクトの値をグループ化する。
   // グループの基準にしたい属性の文字列か、基準を返す関数のいずれかを渡す。
   _.groupBy = function(obj, value, context) {
     return group(obj, value, context, function(result, key, value) {
@@ -398,8 +397,8 @@
 
   // Use a comparator function to figure out the smallest index at which
   // an object should be inserted so as to maintain order. Uses binary search.
-  // 並び順を維持するために、オブジェクトの挿入されるべき最小のインデックスを見つけるため、
-  // 比較関数を使用する。バイナリ検索が使用される。
+  // 並び順を維持するために、オブジェクトの挿入されるべき最小のインデックスを見つける比較関数を
+  // 使用する。バイナリ検索が使用される。
   _.sortedIndex = function(array, obj, iterator, context) {
     iterator = iterator == null ? _.identity : lookupIterator(iterator);
     var value = iterator.call(context, obj);
@@ -531,7 +530,7 @@
 
   // Produce an array that contains the union: each distinct element from all of
   // the passed-in arrays.
-  // 渡されたすべての配列からの個別の各要素から成る集合を含んだ配列を提供する。
+  // 渡されたすべての配列の各個別の要素の集合を含んだ配列を提供する。
   _.union = function() {
     return _.uniq(concat.apply(ArrayProto, arguments));
   };
@@ -559,7 +558,7 @@
 
   // Zip together multiple lists into a single array -- elements that share
   // an index go together.
-  // 単一の配列に、複数のリストを一緒にジップする。同じインデックスを持つ要素が一緒になる。
+  // 単一の配列に、複数のリストを一緒にジップする。同じインデックスを持つ要素は一緒になる。
   _.zip = function() {
     var args = slice.call(arguments);
     var length = _.max(_.pluck(args, 'length'));
@@ -724,7 +723,7 @@
 
   // Returns a function, that, when invoked, will only be triggered at most once
   // during a given window of time.
-  // 呼び出されると、指定された時間のうちに最大でも1度だけトリガされる関数を返す。
+  // 呼び出されると、指定された時間のうちに最大でも1回だけトリガされる関数を返す。
   _.throttle = function(func, wait) {
     var context, args, timeout, result;
     var previous = 0;
@@ -753,11 +752,11 @@
   // Returns a function, that, as long as it continues to be invoked, will not
   // be triggered. The function will be called after it stops being called for
   // N milliseconds. If `immediate` is passed, trigger the function on the
-  // leading edge, instead of the trailing. TODO: 意訳気味...
+  // leading edge, instead of the trailing.
   // 連続して呼び出される限り、トリガされない関数を返す。
   // 関数はNミリ秒の間、呼び出されなかったのちに実行される。
   // `immediate`が渡された場合、連続した呼び出しの後にトリガする代わりに、
-  // 呼び出しが始まった時点で関数をトリガします。
+  // 呼び出しが始まった時点で関数をトリガする。
   _.debounce = function(func, wait, immediate) {
     var timeout, result;
     return function() {
@@ -792,9 +791,8 @@
   // Returns the first function passed as an argument to the second,
   // allowing you to adjust arguments, run code before and after, and
   // conditionally execute the original function.
-  // TODO: 不自然
   // ひとつめの関数を、ふたつめの関数に引数として渡し、引数を調整したり、
-  /// 前後でコードを実行したり、条件付きで元の関数を実行できる関数を返す。
+  // 前後でコードを実行したり、条件付きで元の関数を実行できる関数を返す。
   _.wrap = function(func, wrapper) {
     return function() {
       var args = [func];
@@ -805,8 +803,7 @@
 
   // Returns a function that is the composition of a list of functions, each
   // consuming the return value of the function that follows.
-  // TODO: 不自然
-  // 続く関数の戻り値をそれぞれ消費する、関数リストを合成した関数を返す。
+  // 関数リストから、それぞれの関数がそれに続く関数の戻り値を引数に取る合成関数を返す。
   _.compose = function() {
     var funcs = arguments;
     return function() {
@@ -894,7 +891,7 @@
   };
 
   // Return a copy of the object only containing the whitelisted properties.
-  // ホワイトリストで指定されたプロパティのみを含むオブジェクトのコピーを返す。
+  // ホワイトリスト指定されたプロパティのみを含むオブジェクトのコピーを返す。
   _.pick = function(obj) {
     var copy = {};
     var keys = concat.apply(ArrayProto, slice.call(arguments, 1));
@@ -905,7 +902,7 @@
   };
 
    // Return a copy of the object without the blacklisted properties.
-   // ブラックリストで指定されたプロパティを除いたオブジェクトのコピーを返す。
+   // ブラックリスト指定されたプロパティを除いたオブジェクトのコピーを返す。
   _.omit = function(obj) {
     var copy = {};
     var keys = concat.apply(ArrayProto, slice.call(arguments, 1));
@@ -939,11 +936,9 @@
   // Invokes interceptor with the obj, and then returns obj.
   // The primary purpose of this method is to "tap into" a method chain, in
   // order to perform operations on intermediate results within the chain.
-
-  // TODO: 推敲
   // interceptorでobjを呼び出したあと、objを返す。
-  // この方方法の主な目的は、チェイン内の中間の結果に対して操作を実行するため、
-  // "tap into"がメソッドチェインになることです。
+  // この方法の主な目的は、チェイン内の中間の結果に対して操作を実行するため、
+  // "tap into"がメソッドチェインになることである。
   _.tap = function(obj, interceptor) {
     interceptor(obj);
     return obj;
@@ -1003,8 +998,7 @@
     // Assume equality for cyclic structures. The algorithm for detecting cyclic
     // structures is adapted from ES 5.1 section 15.12.3, abstract operation `JO`.
     // 環状構造の等価性を前提とする。環状構造を検出するアルゴリズムは、
-    // ES 5.1の15.12.3節における`JO`の抽象的操作に適合する。
-    // TODO: JO？？？
+    // ES 5.1の15.12.3節における抽象操作`JO`に適合する。
     var length = aStack.length;
     while (length--) {
       // Linear search. Performance is inversely proportional to the number of
@@ -1013,8 +1007,7 @@
       if (aStack[length] == a) return bStack[length] == b;
     }
     // Add the first object to the stack of traversed objects.
-    // 最初のオブジェクトを、トラバースオブジェクトのスタックに追加する。
-    // TODO: トラバース？？
+    // 最初のオブジェクトを、探索されたオブジェクトのスタックに追加する。
     aStack.push(a);
     bStack.push(b);
     var size = 0, result = true;
@@ -1027,8 +1020,7 @@
       result = size == b.length;
       if (result) {
         // Deep compare the contents, ignoring non-numeric properties.
-        // 数値のようでないプロパティを無視して、コンテントを深く比較する。
-        // TODO: numerice != number に神経質になってる感。numeric難しい。
+        // 数字でないプロパティを無視して、内容を深く比較する。
         while (size--) {
           if (!(result = eq(a[size], b[size], aStack, bStack))) break;
         }
@@ -1036,8 +1028,8 @@
     } else {
       // Objects with different constructors are not equivalent, but `Object`s
       // from different frames are.
-      // 異なるコンストラクタをもつオブジェクトは等価ではないが、
-      // `Object` TODO: イミフ、不完全なのでちゃんとやれ
+      // 異なったコンストラクタをもつオブジェクトたちは等価ではないが、
+      // 違うフレームに由来した`Object`は、その限りでない。
       var aCtor = a.constructor, bCtor = b.constructor;
       if (aCtor !== bCtor && !(_.isFunction(aCtor) && (aCtor instanceof aCtor) &&
                                _.isFunction(bCtor) && (bCtor instanceof bCtor))) {
@@ -1065,7 +1057,7 @@
       }
     }
     // Remove the first object from the stack of traversed objects.
-    // トラバースオブジェクトのスタックから、最初のオブジェクトを削除する。
+    // 探索されたオブジェクトのスタックから、最初のオブジェクトを削除する。
     aStack.pop();
     bStack.pop();
     return result;
@@ -1141,8 +1133,7 @@
   };
 
   // Is the given value `NaN`? (NaN is the only number which does not equal itself).
-  // 与えられた値がが`NaN`であるか？（NaNは自身と等価でない数である）
-  // TODO ()内のonlyが宙ぶらりん
+  // 与えられた値がが`NaN`であるか？（NaNは自身と等価でない唯一の数である）
   _.isNaN = function(obj) {
     return _.isNumber(obj) && obj != +obj;
   };
