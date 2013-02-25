@@ -1133,7 +1133,7 @@
   };
 
   // Is the given value `NaN`? (NaN is the only number which does not equal itself).
-  // 与えられた値がが`NaN`であるか？（NaNは自身と等価でない唯一の数である）
+  // 与えられた値が`NaN`であるか？（NaNは自身と等価でない唯一の数である）
   _.isNaN = function(obj) {
     return _.isNumber(obj) && obj != +obj;
   };
