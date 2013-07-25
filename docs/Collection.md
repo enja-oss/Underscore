@@ -45,7 +45,7 @@ var flat = _.reduceRight(list, function(a, b) { return a.concat(b); }, []);
 
 ### find `_.find(list, iterator, [context])` _Alias: **detect**_ [原文](http://underscorejs.org/#find)
 
-**list** 内のそれぞれの値を調べていき、テストをtrueで通った最初のもの(**iterator**)を返します。この関数は適合した要素を見つけ次第返し、全てのリストを探索はしません。
+**list** 内のそれぞれの値を調べていき、テストをtrueで通った最初のもの( **iterator** )を返します。この関数は適合した要素を見つけ次第返し、全てのリストを探索はしません。
 
 ```javascript
 var even = _.find([1, 2, 3, 4, 5, 6], function(num){ return num % 2 == 0; });
@@ -54,7 +54,7 @@ var even = _.find([1, 2, 3, 4, 5, 6], function(num){ return num % 2 == 0; });
 
 ### filter `_.filter(list, iterator, [context])` _Alias: **select**_ [原文](http://underscorejs.org/#filter)
 
-**list** 内のそれぞれの値を調べていき、テストをtrueで通った全ての値(**iterator**)を返します。ネイティブの **filter** メソッドがある場合には委譲します。
+**list** 内のそれぞれの値を調べていき、テストをtrueで通った全ての値( **iterator** )を返します。ネイティブの **filter** メソッドがある場合には委譲します。
 
 ```javascript
 var evens = _.filter([1, 2, 3, 4, 5, 6], function(num){ return num % 2 == 0; });
@@ -73,7 +73,7 @@ _.where(listOfPlays, {author: "Shakespeare", year: 1611});
 
 ### reject `_.reject(list, iterator, [context])` [原文](http://underscorejs.org/#reject)
 
-テストをtrueで通った要素(**iterator**)を除いた **list** 内の値を返します。 **filter** の反対です。
+テストをtrueで通った要素( **iterator** )を除いた **list** 内の値を返します。 **filter** の反対です。
 
 ```javascript
 var odds = _.reject([1, 2, 3, 4, 5, 6], function(num){ return num % 2 == 0; });
