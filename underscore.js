@@ -52,8 +52,7 @@
   // **Node.js** 用に古い`require()`APIへの後方互換性を持たせて、Undesrscoreオブジェクトを
   // エクスポートする。ブラウザであれば、Closure CompilerのAdvancedモードのため文字識別子を
   // 使用し、グローバルオブジェクトとして`_`を追加する。
-
-  Closure Compilerの"advanced"モードのため
+  // Closure Compilerの"advanced"モードのため
   if (typeof exports !== 'undefined') {
     if (typeof module !== 'undefined' && module.exports) {
       exports = module.exports = _;
