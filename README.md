@@ -1,4 +1,4 @@
-#Underscoreドキュメント日本語訳
+# Underscoreドキュメント日本語訳
 
 部分的な翻訳済みドキュメントを集めていって、翻訳カバー率100%を目指します。
 Pull Request・Issue・ご寄稿・ご指摘、いずれも歓迎しています。お気軽にどうぞ。
@@ -38,7 +38,7 @@ Markdown上で元文書の表現を再現できるようご協力ください。
 en.ja-ossプロジェクトでは現在管理者を募集しています。
 詳しくは[こちらを参照してください](https://github.com/enja-oss/README/issues/12)。
 
-##翻訳済みコンテンツ
+## 翻訳済みコンテンツ
 
 - [Intoduction](https://github.com/enja-oss/Underscore/blob/master/docs/Introduction.md)
 - [Collections](https://github.com/enja-oss/Underscore/blob/master/docs/Collection.md)
@@ -49,30 +49,30 @@ en.ja-ossプロジェクトでは現在管理者を募集しています。
 - [Chaining](https://github.com/enja-oss/Underscore/blob/master/docs/Chaining.md)
 - [Links & Suggested Reading](https://github.com/enja-oss/Underscore/blob/master/docs/Links-and-Suggested-reading.md)
 
-##着手中/予定コンテンツ
+## 着手中/予定コンテンツ
 
 - [annotated source code](http://underscorejs.org/docs/underscore.html) [@ahomu](https://github.com/ahomu)
 
-##未着手コンテンツ
+## 未着手コンテンツ
 
 - 現在着手前のコンテンツはありません
 
 コンテンツの翻訳にご協力くださる方は、ぜひ[着手予定の宣言コーナー](https://github.com/enja-oss/Underscore/issues/1)でお知らせください。
 その際に、着手予定のが他の人とかぶっていないこともご確認ください。
 
-###参照先
+### 参照先
 
 翻訳当時の[Underscore.jsのGitHubページ](http://underscorejs.org/)を参考にしています。
 そのため、その時点の本家[gh-pages](https://github.com/documentcloud/underscore/tree/gh-pages)ブランチから、コミットハッシュのtreeを辿って指定しています。
 
-##ライセンス・クレジット
+## ライセンス・クレジット
 
 本ドキュメントは、underscore.orgで公開されているものを翻訳したドキュメントです。
 原文は[Underscore.js](http://underscorejs.org/ "Underscore.js")にあります。
 
 Underscore.jsのライセンスを引き継ぎ、すべてMIT Licenseとします。
 
-##翻訳参加者
+## 翻訳参加者
 
 随時追加しています。
 
